@@ -13,4 +13,8 @@ func main() {
 		fmt.Println("Minor")
 	}
 
+	if x := 6; x > 5 {
+		fmt.Println("Big")
+	}
+
 }
