@@ -16,6 +16,28 @@ func main() {
 	}
 
 	// Delete
-	delete(m, "apple")
+	// delete(m, "apple")
+
+	type User struct {
+		ID    int
+		Name  string
+		Email string
+	}
+
+	u := User{
+		ID:   1,
+		Name: "Alice",
+	}
+	fmt.Println(u)
+
+	// When converting this struct to JSON, call this field id, not ID.
+	// type User struct {
+	// 	ID   int    `json:"id"`
+	// 	Name string `json:"name"`
+	// }
+	x := 10
+	p := &x
+	fmt.Println(p)  // address
+	fmt.Println(*p) // Value
 
 }
