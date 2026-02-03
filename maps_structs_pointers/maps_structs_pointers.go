@@ -2,6 +2,25 @@ package main
 
 import "fmt"
 
+type User struct {
+	ID    int
+	Name  string
+	Email string
+}
+
+type BigStruct struct {
+	ID    int
+	Name  string
+	Email string
+}
+
+// 1. To Modify Data
+func update(u *User) {
+	u.Name = "Bob"
+}
+
+// 2. To Avoid Copying Large Structs
+func process(u *BigStruct) {}
 func main() {
 
 	// Reference type, Fast lookup (hash table), Unordered, Zero value is nil
@@ -17,12 +36,6 @@ func main() {
 
 	// Delete
 	// delete(m, "apple")
-
-	type User struct {
-		ID    int
-		Name  string
-		Email string
-	}
 
 	u := User{
 		ID:   1,
